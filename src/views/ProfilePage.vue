@@ -7,12 +7,24 @@
     </video>
 
     <div class="profile-card">
-      <video autoplay loop muted class="profile-picture">
-        <source src="@/assets/profilepicture.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="profile-picture-container">
+        <!-- Replace video with an img tag for profile picture -->
+        <img src="@/assets/profilepicture.jpg" alt="Profile Picture" class="profile-picture" />
+      </div>
       <h1>Randy Macapagal</h1>
-      <p>BSCPE | TIP | CPE400</p>
+      <p>CPE 400-CPE41S1</p>
+       <h2>Birthdate:</h2>
+         <p>June 18,1999</p>
+        <h2>Education:</h2>
+      <p>Political Science Graduate at University of Caloocan City 2021</p>
+      <p>4th year BSCPE student at Technological Institute of the Philippines</p>
+      <h2>Skills: </h2>
+      <p>Drawing, Coding, and Building Computer Systems</p>
+      <h2>On the Job Trainings:</h2>
+      <p>UNIVERSITY OF CALOOCAN CITY Staff Trainee (300 hrs)</p>
+      <p>LAWANG BATO NATIONAL HIGH SCHOOL Guidance Office/ Student Action Center Councilor Trainee (300 hrs)</p>
+      <h4>Social Media:</h4>
+
       <div class="social-links">
         <a href="https://www.facebook.com/chocchocobu/" target="_blank">Facebook</a>
         <a href="https://www.linkedin.com/in/randy-macapagal-a366a5294/" target="_blank">LinkedIn</a>
@@ -26,6 +38,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "ProfilePage"
+};
+</script>
 
 <style scoped>
 /* Import the Minecraft-like font from Google Fonts */
@@ -67,25 +85,40 @@ body, html {
   background: rgba(255, 255, 255, 0.1);  /* More translucent white background */
   padding: 40px;
   border-radius: 15px;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);  /* Stronger shadow for emphasis */
   width: 80%;  /* Use a percentage width to take up more of the screen */
-  max-width: 600px;
-  min-height: 600px;
+  max-width: 1000px;
+  min-height: 900px;
   z-index: 1; /* Ensure the profile card is above the background video */
 }
 
-.profile-card video {
+.profile-picture-container {
+  display: flex;
+  justify-content: center; /* Center the profile picture */
+  margin-bottom: 20px;
+}
+
+.profile-card img.profile-picture {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
 }
 
 .profile-card h1 {
   margin: 15px 0;
-  color: white; /* Change the name color to white */
+  color: Cyan; /* Change the name color to white */
+}
+
+.profile-card h2 {
+  margin: 15px 0;
+  color: Yellow; /* Change the name color to white */
+}
+
+.profile-card h4 {
+  margin: 15px 0;
+  color: Orange; /* Change the name color to white */
 }
 
 .profile-card p {
@@ -94,7 +127,7 @@ body, html {
 }
 
 .profile-card .social-links a {
-  margin: 0 12px;
+  margin: 0 100px;
   color: #6e8efb;
   text-decoration: none;
   font-weight: bold;
